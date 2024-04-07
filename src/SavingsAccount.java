@@ -1,10 +1,26 @@
+import java.util.ArrayList;
+import java.util.Objects;
 import java.util.Scanner;
 
 public class SavingsAccount extends BankAccount{
 
-    public SavingsAccount(String accNumber, int balance) {
-        super(accNumber, balance);
+    public SavingsAccount(String accNumber, int balance, String accountType) {
+        super(accNumber, balance, accountType);
     }
+
+//    public int GenerateSavingAccountNumber(){
+//        int templateAccNumber = 114500004;
+//        int NewAccountNumber;
+//
+//        for (int i = 0; i < SavingAccountStorage.size(); i++) {
+//            if (SavingAccountStorage.get(i) != templateAccNumber){
+//                templateAccNumber += 1;
+//                NewAccountNumber = templateAccNumber;
+//                return NewAccountNumber;
+//            }
+//        }return 0;
+//    }
+
 
     public void withdrawal(){
         Scanner input = new Scanner(System.in);
@@ -35,4 +51,22 @@ public class SavingsAccount extends BankAccount{
         System.out.println( " ");
 
     }
+
+
+    public void calInterestRateForSA(int year){
+
+        double interest = 0;
+        double TotalAmount ;
+        double perYearForSavingAcc = 2;
+
+            if (year >= 1){
+                interest = this.balance * (year * perYearForSavingAcc / 100);
+            } else{
+                System.out.println("You do not have interest");
+            }
+        TotalAmount = this.balance +  interest;
+        System.out.println("your interest is "+ interest);
+        System.out.println("your Total Balance with interest is "+ TotalAmount);
+    }
+
 }
