@@ -7,7 +7,6 @@
 
 > [!WARNING]
 > No database. <br />
-> A list of arrays is used to store the data.
 
 <hr >
 
