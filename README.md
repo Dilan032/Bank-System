@@ -5,7 +5,7 @@
 
 <hr >
 
-> [!WARNING]
+> [!NOTE]
 > No database. <br />
 
 <hr >
